@@ -1,0 +1,14 @@
+.quiz {
+    border: 1px solid purple;
+    /* border-radius: 10px; */
+    padding-bottom: 20px;
+}
+
+.quiz img {
+    height: 300px;
+    width: 100%;
+}
+
+.btn:hover {
+    background-color: aqua;
+}
