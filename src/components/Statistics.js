@@ -11,6 +11,7 @@ const Statistics = () => {
         <LineChart width={800} height={400} data={data} className='my-6'>
 
             <Line type="monotone" dataKey="total" stroke="#82ca9d" />
+            <CartesianGrid strokeDasharray="3 3" />
             <XAxis dataKey="name" />
             <YAxis />
 

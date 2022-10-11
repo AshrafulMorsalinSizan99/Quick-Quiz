@@ -22,6 +22,14 @@ const QuesAns = ({ quiz }) => {
         // console.log(res.correctAnswer)
         toast.info(`Correct Answer: ${res.correctAnswer}`, { autoClose: 500 });
     }
+    // onValueChange(event) {
+
+    //     this.setState({
+
+    //         selectedOption: event.target.value
+
+    //     });
+
 
     return (
         <div className='questions'>
@@ -41,7 +49,7 @@ const QuesAns = ({ quiz }) => {
                     // <li>{str}</li>
                     // <input type="radio" name="{radio-1}" className="radio" />, { str }
                     <form>
-                        <div>
+                        <div className='radio'>
                             <label>
                                 <input type="radio" name={id} />{str}
                             </label>
@@ -53,5 +61,6 @@ const QuesAns = ({ quiz }) => {
         </div>
     );
 };
+
 
 export default QuesAns;
