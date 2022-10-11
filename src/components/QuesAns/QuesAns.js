@@ -19,7 +19,7 @@ const QuesAns = ({ quiz }) => {
     // console.log(a)
     const render = a.options.map((item, index) => <p key={index}>{item}</p>);
     const handleIcon = (res) => {
-        console.log(res.correctAnswer)
+        // console.log(res.correctAnswer)
         toast.info(`Correct Answer: ${res.correctAnswer}`, { autoClose: 500 });
     }
 
@@ -38,8 +38,15 @@ const QuesAns = ({ quiz }) => {
             } */}
             {
                 a.options.map((str) => (
-                    <li>{str}</li>
+                    // <li>{str}</li>
                     // <input type="radio" name="{radio-1}" className="radio" />, { str }
+                    <form>
+                        <div>
+                            <label>
+                                <input type="radio" name={id} />{str}
+                            </label>
+                        </div>
+                    </form>
 
                 ))
             }
