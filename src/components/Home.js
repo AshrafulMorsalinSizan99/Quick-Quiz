@@ -6,7 +6,7 @@ import './Home.css';
 
 const Home = () => {
     const quizzes = useLoaderData().data;
-    console.log(quizzes);
+    // console.log(quizzes);
     return (
 
         <section>
