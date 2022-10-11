@@ -11,9 +11,9 @@ const QuesAns = ({ quiz }) => {
     // const render = items.map((item, index) =>
     //     <div key={index}>{item}</div>
     // );
-    console.log(quiz.correctAnswer)
+    // console.log(quiz.correctAnswer)
     const a = { options };
-    // console.log(a);
+    console.log(a);
     const render = a.options.map((item, index) => <p key={index}>{item}</p>);
     const handleIcon = (quiz) => {
         toast.info('Correct Answer:', { autoClose: 500 })
