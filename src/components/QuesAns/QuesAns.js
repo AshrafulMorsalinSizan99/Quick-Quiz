@@ -30,7 +30,17 @@ const QuesAns = ({ quiz }) => {
 
     //     });
 
+    const handleOption = (str, res) => {
+        console.log(str.str);
+        console.log(res.correctAnswer)
 
+        if (str.str === res.correctAnswer) {
+            toast.success('Your answer is correct', { autoClose: 500 })
+        }
+        else {
+            toast.error('Your answer is wrong', { autoClose: 500 })
+        }
+    }
     return (
         <div className='questions'>
             <h1 className='font-bold'>Question: {question}</h1>
@@ -39,8 +49,8 @@ const QuesAns = ({ quiz }) => {
                 <i class="fa-solid fa-eye"></i>
             </button>
             {/* <input type="radio">{render}</input> */}
-            {/* <div>{render}</div> */}
-            {/* <li>{render}</li> */}
+
+
             {/* {
                 a.map((item, index) => <input type="radio" key={index}>{item}</input>)
             } */}
@@ -48,13 +58,14 @@ const QuesAns = ({ quiz }) => {
                 a.options.map((str) => (
                     // <li>{str}</li>
                     // <input type="radio" name="{radio-1}" className="radio" />, { str }
-                    <form>
-                        <div className='radio'>
-                            <label>
-                                <input type="radio" name={id} />{str}
-                            </label>
-                        </div>
-                    </form>
+
+                    <div className='radio'>
+                        <label>
+                            <input type="radio" name={id} onClick={() => handleOption({ str }, quiz)} />{str}
+                        </label>
+
+                    </div>
+
 
                 ))
             }
